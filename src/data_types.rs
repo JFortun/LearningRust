@@ -1,4 +1,4 @@
-pub fn data_types() {
+pub fn _data_types() {
     let _guess: u32 = "42".parse().expect("Not a number!");
 
     let _x = 2.0;

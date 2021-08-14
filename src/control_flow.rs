@@ -1,4 +1,4 @@
-pub fn control_flow() {
+pub fn _control_flow() {
     let number = 8;
 
     if number < 5 {

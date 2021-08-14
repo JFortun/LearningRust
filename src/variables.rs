@@ -1,4 +1,4 @@
-pub fn variables() {
+pub fn _variables() {
     let mut x = 5;
     println!("The value of x is: {}", x);
     x = 6;
