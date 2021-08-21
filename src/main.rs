@@ -5,6 +5,7 @@ mod guessing_game;
 mod ownership;
 mod references_borrowing;
 mod slice_type;
+mod structs;
 mod variables;
 
 fn main() {
@@ -17,4 +18,5 @@ fn main() {
     //ownership::_ownership();
     //references_borrowing::_references_borrowing();
     //slice_type::slice_type();
+    //structs::structs();
 }
