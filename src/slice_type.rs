@@ -1,4 +1,4 @@
-pub fn slice_type() {
+pub fn _slice_type() {
     let mut s = String::from("Hello world");
 
     let word = _first_word(&s);
