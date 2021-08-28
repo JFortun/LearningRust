@@ -1,5 +1,6 @@
 mod control_flow;
 mod data_types;
+mod enums;
 mod functions;
 mod guessing_game;
 mod ownership;
@@ -17,6 +18,7 @@ fn main() {
     //guessing_game::_guessing_game();
     //ownership::_ownership();
     //references_borrowing::_references_borrowing();
-    //slice_type::slice_type();
-    //structs::structs();
+    //slice_type::_slice_type();
+    //structs::_structs();
+    //enums::_enums();
 }
