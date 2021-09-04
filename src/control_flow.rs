@@ -1,3 +1,16 @@
+#[derive(Debug)]
+enum _State {
+    _Alabama,
+    _Alaska,
+}
+
+enum _Coin {
+    _Penny,
+    _Nickel,
+    _Dime,
+    _Quarter(_State),
+}
+
 pub fn _control_flow() {
     let number = 8;
 
@@ -42,4 +55,42 @@ pub fn _control_flow() {
         println!("{}!", number);
     }
     println!("End!");
+
+    _value_in_cents(_Coin::_Penny);
+    _value_in_cents(_Coin::_Quarter(_State::_Alabama));
+
+    let _five = Some(5);
+    let _six = _plus_one(_five);
+    let _none = _plus_one(None);
+
+    let _some_u8_value = 0u8;
+    match _some_u8_value {
+        1 => println!("one"),
+        3 => println!("three"),
+        5 => println!("five"),
+        7 => println!("seven"),
+        _ => (),
+    }
+}
+
+fn _value_in_cents(coin: _Coin) -> u8 {
+    match coin {
+        _Coin::_Penny => {
+            println!("Lucky penny!");
+            1
+        }
+        _Coin::_Nickel => 5,
+        _Coin::_Dime => 10,
+        _Coin::_Quarter(state) => {
+            println!("State quarter from {:?}!", state);
+            25
+        }
+    }
+}
+
+fn _plus_one(x: Option<i32>) -> Option<i32> {
+    match x {
+        None => None,
+        Some(i) => Some(i + 1),
+    }
 }
