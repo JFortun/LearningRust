@@ -71,6 +71,25 @@ pub fn _control_flow() {
         7 => println!("seven"),
         _ => (),
     }
+
+    let some_u8_value = Some(0u8);
+    if let Some(3) = some_u8_value {
+        println!("three");
+    }
+
+    let coin = _Coin::_Penny;
+    let mut _count = 0;
+    match &coin {
+        _Coin::_Quarter(state) => println!("State quarter from {:?}!", state),
+        _ => _count += 1,
+    }
+
+    let mut _count = 0;
+    if let _Coin::_Quarter(state) = &coin {
+        println!("State quarter from {:?}!", state);
+    } else {
+        _count += 1;
+    }
 }
 
 fn _value_in_cents(coin: _Coin) -> u8 {
