@@ -11,23 +11,23 @@ struct _User {
 
 #[derive(Debug)]
 struct _Rectangle {
-    width: u32,
-    height: u32,
+    _width: u32,
+    _height: u32,
 }
 
 impl _Rectangle {
     fn _area(&self) -> u32 {
-        self.width * self.height
+        self._width * self._height
     }
 
     fn _can_hold(&self, other: &_Rectangle) -> bool {
-        self.width > other.width && self.height > other.height
+        self._width > other._width && self._height > other._height
     }
 
     fn _square(size: u32) -> _Rectangle {
         _Rectangle {
-            width: size,
-            height: size,
+            _width: size,
+            _height: size,
         }
     }
 }
@@ -57,16 +57,16 @@ pub fn _structs() {
     let _origin = _Point(0, 0, 0);
 
     let rect1 = _Rectangle {
-        width: 30,
-        height: 50,
+        _width: 30,
+        _height: 50,
     };
     let rect2 = _Rectangle {
-        width: 10,
-        height: 40,
+        _width: 10,
+        _height: 40,
     };
     let rect3 = _Rectangle {
-        width: 60,
-        height: 45,
+        _width: 60,
+        _height: 45,
     };
     println!("rect1: {:#?}", rect1);
 
